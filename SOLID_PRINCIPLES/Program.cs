@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            //***Liskov Substitution Principle
             //Below are the regular form of declarations.
 
             //var numbers = new int[] { 5, 7, 9, 8, 1, 6, 4 };
@@ -20,6 +21,16 @@
             Console.WriteLine();
             Calculator evenSum = new EvenNumbersSumCalculator(numbers);
             Console.WriteLine($"The sum of all the even numbers: {evenSum.Calculate()}");
+
+
+            IFruit fruit = new Orange();
+            Console.WriteLine($"Color of Orange: {fruit.GetColor()}");
+            fruit = new Apple();
+            Console.WriteLine($"Color of Apple: {fruit.GetColor()}");
+            Console.ReadKey();
+
+
+            //***
         }
     }
 }
